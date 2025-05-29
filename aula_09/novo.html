@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #divBotao {
+            background-color: gray;
+            text-align: center;
+            padding: 100px;
+            width: 300px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div id="divBotao" onclick="clicar()" onmouseenter="entrar()" onmouseleave="sair()">
+        Botão
+    </div>
+    <script>
+        function clicar() {
+            divBotao.style.background = "red"
+            divBotao.innerHTML = "clicou"
+            divBotao.style.color = "white"
+        }
+        function entrar() {
+            divBotao.style.background = "yellow"
+            divBotao.innerHTML = "entrou"
+            divBotao.style.color = "black"
+        }
+        function sair() {
+            divBotao.style.background = "gray"
+            divBotao.innerHTML = "Botão"
+            divBotao.style.color = "black"
+        }
+    </script>
+</body>
+
+
+</html>
