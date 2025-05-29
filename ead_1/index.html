@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Acesso</title>
+    <style>
+        html {
+            background-color: #dfdfdf;
+        }
+
+        #fundo_branco {
+            background-color: #ffffff;
+            margin-top: 15%;
+            margin-left: 15%;
+            margin-right: 12%;
+            border-radius: 10px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            padding: 40px;
+        }
+
+        #fmp_logo {
+            height: 25px;
+            width: 90px;
+        }
+
+        #texto {
+            text-align: center;
+        }
+
+        #campo_texto {
+            border-radius: 10px;
+            padding: 10px;
+            width: 80%;
+            border-width: 3px;
+        }
+
+        #botoes {
+            text-align: right;
+            margin-right: 20%;
+        }
+
+        .botao {
+            border-radius: 10px;
+            border-color: #dfdfdf;
+            border-style: none;
+            height: 30px;
+        }
+
+        #links_idioma {
+            margin-left: 15%;
+            margin-right: 12%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin-top: 15px;
+        }
+
+        #direita_baixo {
+            text-align: right;
+        }
+
+        .link {
+            margin-right: 3%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="fundo_branco">
+        <div id="esquerda_cima">
+            <img id="fmp_logo" src="imagens/fmp_logo.png">
+            <div id="texto">
+                <h1>Boa Prova!</h1>
+                <h3><b>Construa a interface.</b></h3>
+            </div>
+        </div>
+        <div id="direita_cima">
+            <form>
+                <br><br>
+                <input type="text" placeholder="Email ou telefone" id="campo_texto">
+                <br>
+                <a href="">Esqueceu-se do email?</a>
+                <br><br><br>
+                <div id="botoes">
+                    <button class="botao">Criar conta</button>
+                    <button class="botao">Próxima</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="links_idioma">
+        <div id="esquerda_baixo">
+            <select id="idiomas" name="idioma">
+                <option value="portugues_brasileiro">Português (Brasil)</option>
+            </select>
+        </div>
+        <div id="direita_baixo">
+            <a class="link" href="">Ajuda</a>
+            <a class="link" href="">Privacidade</a>
+            <a class="link" href="">Termos</a>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Formulário</title>
+</head>
+
+<body>
+    <h3>Aula 2 - Formulário</h3>
+    <form action="https://formspree.io/f/xrbejdlo" method="POST">
+
+        <label>Digite sua mensagem:</label><br>
+        <textarea rows="15" cols="30" placeholder="mensagem" type="text" required="required" value="mensagem" name="mensagem"></textarea>
+
+        <br><br>
+
+        <label>Digite seu estado:</label>
+        <input placeholder="estado" type="text" required="required" value="estado" name="estado">
+
+        <br><br>
+
+        <label>Selecione sua cidade:</label>
+        <select name="cidade">
+            <option value="palhoca">Palhoça</option>
+            <option value="sao_jose">São José</option>
+            <option value="florianopolis">Florianópolis</option>
+            <option value="santo_amaro_da_imperatriz">Santo Amaro da Imperatriz</option>
+        </select>
+
+        <br><br>
+
+        <label>Bairros que deseja pesquisar:</label>
+        <ul>
+            <li><input type="checkbox" value="SIM" name="Ponte">Ponte do Imaruim</li>
+            <li><input type="checkbox" value="SIM" name="Centro">Centro</li>
+            <li><input type="checkbox" value="SIM" name="Enseada">Enseada</li>
+            <li><input type="checkbox" value="SIM" name="AltoAririu">Alto Aririu</li>
+        </ul>
+
+        <br><br>
+
+        <label>Faixa do aluguel:</label>
+        <ul>
+            <li><input type="radio" value="1_500" name="valor_aluguel">Até R$500.</li>
+            <li><input type="radio" value="501_1500" name="valor_aluguel">De R$501 até R$1500</li>
+            <li><input type="radio" value="1501_2500" name="valor_aluguel">De R$1501 até R$2500</li>
+            <li><input type="radio" value="2501_" name="valor_aluguel">Acima de R$2501</li>
+        </ul>
+
+        <input value="SIM" type="checkbox" name="termos" required>Eu li e aceito os Termos de Uso.
+
+        <br><br>
+
+        <input type="submit" value="enviar" name="enviar">
+    </form>
+</body>
+
+</html>
