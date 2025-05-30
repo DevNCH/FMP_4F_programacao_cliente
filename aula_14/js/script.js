@@ -12,17 +12,16 @@ class Alunos {
         let validado = this.Validar(aluno)
 
         if (validado == true) {
-            console.log('Validado!')
             this.Salvar(aluno)
         }
 
         this.Listar()
 
         this.Limpar()
+        console.log('Adicionado')
     }
 
     LerDados() {
-        console.log('Ler')
 
         let aluno = {}
 
@@ -30,6 +29,7 @@ class Alunos {
         aluno.nome = document.getElementById('nome').value
         aluno.media = document.getElementById('media').value
 
+        console.log('Lido')
         return aluno
     }
 
@@ -52,16 +52,18 @@ class Alunos {
 
         if (msg != '') {
             alert(msg)
+            console.log('Inválido')
             return false
         }
 
+        console.log('Válidado')
         return true
     }
     
     Salvar(aluno) {
-        console.log('Salvar')
         this.arrayAlunos.push(aluno)
         this.id++
+        console.log('Salvo')
     }
 
     Listar() {
@@ -79,13 +81,33 @@ class Alunos {
             td_id.innerText = this.arrayAlunos[i].id;
             td_nome.innerText = this.arrayAlunos[i].nome;
             td_media.innerText = this.arrayAlunos[i].media;
-            td_remover.innerText = ''
+
+            let bt_remover = document.createElement('button')
+            bt_remover.textContent = 'Remover'
+
+            bt_remover.onclick = () => {
+                this.Remover(this.arrayAlunos[i].id)
+            }
+            td_remover.appendChild(bt_remover)
         }
     }
     
     Limpar() {
         document.getElementById('nome').value = null
         document.getElementById('media').value = null
+    }
+
+    Remover(id) {
+        let tbody = document.getElementById('tbody')
+
+        for(let i = 0; i < this.arrayAlunos.length; i++) {
+            if (this.arrayAlunos[i].id == id) {
+                this.arrayAlunos.splice(i, 1)
+                tbody.deleteRow(i)
+            }
+        }
+
+        console.log('Aluno excluido.')
     }
 }
 
